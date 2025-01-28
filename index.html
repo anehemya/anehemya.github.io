@@ -6,11 +6,13 @@
     <title>Akiva Yeshurun - Software Engineer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="nav-content">
-            <h1>Akiva Yeshurun</h1>
+            <h1><a href="#about"><b>Akiva Yeshurun</a></b></h1>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -27,7 +29,7 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <img src="Headshot.jpg" alt="Akiva Yeshurun" class="profile-photo">
-                <div class="about-text">
+                <div class="about-text card">
                     <div class="about-paragraphs">
                         <p>My name is Akiva Yeshurun, and I am a full-time CS student at Florida International University as well as a full stack engineer. I have always been captivated by the convergence of the world of technology and the world of people. This fascination led me to pursue a degree in Computer Science with minors in Psychology and Digital Art, where I have developed a solid foundation in programming languages such as Python, Java, and Javascript, design skills such as UX research, ideation, and prototyping, and have learnt about social psychology and personality development. Through my coursework and personal projects, I have honed my problem-solving skills and gained hands-on experience in software development, especially focusing on building software to make education accessible.</p>
 
@@ -38,9 +40,15 @@
                         <p>As I continue my academic and professional journey, I am eager to apply my interdisciplinary knowledge and skills to real-world projects and challenges. I am committed to continuous learning and growth in both my technical abilities and understanding of human behavior, aiming to make meaningful contributions in the field of technology and beyond.</p>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/anehemya" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/akiva-yeshurun-909837281/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:akyeshurun@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/anehemya" target="_blank" class="button">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/akiva-yeshurun-909837281/" target="_blank" class="button">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:akyeshurun@gmail.com" class="button">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -51,37 +59,40 @@
         <div class="container">
             <h2>Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item card" onclick="window.location.href='experiences/amadeus.html'">
                     <h3>Software Engineering Intern</h3>
-                    <h4>Amplitude</h4>
+                    <h4>Amadeus Inc</h4>
                     <p class="date">Jul. 2024 - Sep. 2024</p>
                     <ul>
                         <li>Structured Microsoft Azure project, working one-on-one with Senior Software Architect, to detect PII in company metrics and presented the successful prototype</li>
-                        <li>Implemented machine learning technologies (Tesseract/Microsoft Presidio) to analyze visual/textual PII instances, with deployment and data processing through containerized Python programs with messages displayed through Azure Functions</li>
-                        <li>Worked in an Agile SAFe environment to learn from experienced scrummates by contributing to daily Scrum and code presentations. Participated in daily team meetings and presented the final project</li>
+                        <li>Implemented machine learning technologies (Tesseract/Microsoft Presidio) to analyze visual/textual PII instances</li>
+                        <li>Worked in an Agile SAFe environment to learn from experienced scrummates</li>
                     </ul>
+                    <span class="read-more">Click for details →</span>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item card" onclick="window.location.href='experiences/reality-ai.html'">
                     <h3>Software Engineering Intern</h3>
                     <h4>Reality AI</h4>
                     <p class="date">May 2024 - Aug. 2024</p>
                     <ul>
-                        <li>Integrated Vertex AI to create questions for a custom quiz generator, leveraging LLM capabilities to generate questions and configure parameters for controlled output</li>
-                        <li>Implemented data storage of processed documents using ChromaDB, improving data retrieval speed and reducing latency, while leveraging UI features of Streamlit to create an appealing UI</li>
-                        <li>Enhanced team output in an Agile (Scrum) environment, by improving communication and group clarity</li>
+                        <li>Integrated Vertex AI to create questions for a custom quiz generator</li>
+                        <li>Implemented data storage of processed documents using ChromaDB</li>
+                        <li>Enhanced team output in an Agile (Scrum) environment</li>
                     </ul>
+                    <span class="read-more">Click for details →</span>
                 </div>
 
-                <div class="timeline-item">
+                <div class="timeline-item card" onclick="window.location.href='experiences/sharetru.html'">
                     <h3>Front-End Research Intern</h3>
                     <h4>Sharetru</h4>
                     <p class="date">Dec. 2023 - Jan. 2024</p>
                     <ul>
-                        <li>Produced comprehensive analysis of competitor computer-user interactions as measured by consistent customer satisfaction and retention rates</li>
-                        <li>Devised data-driven system design enhancements to optimize the user-digital interface, by improving user satisfaction and efficiency metrics, while analyzing data and cross-referencing with competitors</li>
-                        <li>Conducted concept design of over 12 UX/UI features with implementation options by conducting UX analysis and discussing with company stakeholders</li>
+                        <li>Produced comprehensive analysis of competitor computer-user interactions</li>
+                        <li>Devised data-driven system design enhancements</li>
+                        <li>Conducted concept design of over 12 UX/UI features</li>
                     </ul>
+                    <span class="read-more">Click for details →</span>
                 </div>
             </div>
         </div>
@@ -91,21 +102,54 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card card" onclick="window.location.href='projects/personapal.html'">
                     <h3>PersonaPal</h3>
-                    <p>Developing a web application utilizing CGAN technology (PyTorch) to simulate high volume customer surveys, by creating synthetic customer personas as stand ins for real customer data. Working with co-founder to create full-stack applications, including React frontend, MySQL and MongoDB databases, and PyTorch with GPT for AI services.</p>
-                    <p>Integrating multifaceted, peer reviewed research from cognitive studies, consumer behavior studies, and decision making psychology, to both inform product orientation and fine-tune AI models for accurate survey results.</p>
+                    <p>Developing a web application utilizing CGAN technology (PyTorch) to simulate high volume customer surveys, by creating synthetic customer personas as stand ins for real customer data.</p>
+                    <p>Integrating multifaceted, peer reviewed research from cognitive studies, consumer behavior studies, and decision making psychology.</p>
+                    <div class="technologies">
+                        <span>PyTorch</span>
+                        <span>React</span>
+                        <span>MongoDB</span>
+                        <span>GPT</span>
+                    </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank" class="button">
+                            Project Details
+                        </a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>Sefaria Text Recognition and Retrieval Mobile App</h3>
-                    <p>Developed a mobile application utilizing Tesseract OCR API to scan and recognize Hebrew text from images captured by a device's camera. Integrated app with the Sefaria API to locate and match recognized Hebrew text within the Sefaria library for enhanced study and research.</p>
-                    <p>Improved user experience by streamlining access to relevant biblical and rabbinic sources through seamless text recognition and retrieval functionality.</p>
+                <div class="project-card card" onclick="window.location.href='projects/sefaria-ocr.html'">
+                    <h3>Sefaria Text Recognition</h3>
+                    <p>Developed a mobile application utilizing Tesseract OCR API to scan and recognize Hebrew text from images captured by a device's camera.</p>
+                    <p>Improved user experience by streamlining access to relevant biblical and rabbinic sources.</p>
+                    <div class="technologies">
+                        <span>Flutter</span>
+                        <span>Tesseract</span>
+                        <span>Sefaria API</span>
+                        <span>SQLite</span>
+                    </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank" class="button">
+                            Project Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card card" onclick="window.location.href='projects/lexicographica.html'">
+                    <h3>Lexicographica</h3>
+                    <p>A web application designed to be your one-stop shop for all things language-related, integrating Google Studio's AI technology for comprehensive language assistance.</p>
+                    <p>Features a clean, minimalist design with an intuitive chat interface and interactive elements for language exploration.</p>
+                    <div class="technologies">
+                        <span>React</span>
+                        <span>Figma</span>
+                        <span>Google Studio AI</span>
+                        <span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="button">
+                            Project Details
+                        </a>
                     </div>
                 </div>
             </div>
@@ -115,7 +159,7 @@
     <section id="education" class="section">
         <div class="container">
             <h2>Education</h2>
-            <div class="education-item">
+            <div class="education-item card">
                 <h3>B.A. in Computer Science, Minor in Psychology/Digital Art</h3>
                 <h4>Florida International University, Miami, FL</h4>
                 <p class="date">Aug. 2022 - Dec. 2025</p>
@@ -129,7 +173,7 @@
         <div class="container">
             <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Languages & Frameworks</h3>
                     <div class="skill-items">
                         <span class="skill-item">Java</span>
@@ -145,7 +189,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <div class="skill-category card">
                     <h3>Software & Tools</h3>
                     <div class="skill-items">
                         <span class="skill-item">Microsoft Azure</span>
@@ -164,21 +208,21 @@
         <div class="container">
             <h2>Contact</h2>
             <div class="contact-content">
-                <div class="contact-text">
+                <div class="contact-text card">
                     <p>I'm always interested in hearing about new opportunities and collaborating on innovative projects. Feel free to reach out through any of the following channels:</p>
                 </div>
                 <div class="contact-grid">
-                    <a href="mailto:akyeshurun@gmail.com" class="contact-item">
+                    <a href="mailto:akyeshurun@gmail.com" class="contact-item card">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <p>akyeshurun@gmail.com</p>
                     </a>
-                    <a href="https://www.linkedin.com/in/akiva-yeshurun-909837281/" target="_blank" class="contact-item">
+                    <a href="https://www.linkedin.com/in/akiva-yeshurun-909837281/" target="_blank" class="contact-item card">
                         <i class="fab fa-linkedin"></i>
                         <h3>LinkedIn</h3>
                         <p>Connect with me</p>
                     </a>
-                    <a href="https://github.com/anehemya" target="_blank" class="contact-item">
+                    <a href="https://github.com/anehemya" target="_blank" class="contact-item card">
                         <i class="fab fa-github"></i>
                         <h3>GitHub</h3>
                         <p>See my work</p>
@@ -190,7 +234,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Akiva Yeshurun. All rights reserved.</p>
+            <p>&copy; 2025 Akiva Yeshurun. All rights reserved.</p>
         </div>
     </footer>
 </body>
