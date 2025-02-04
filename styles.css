@@ -193,6 +193,7 @@ nav a:hover::after {
     font-weight: bold;
 }
 
+/* Read More Button */
 .read-more {
     position: absolute;
     bottom: 1.5rem;
@@ -204,12 +205,15 @@ nav a:hover::after {
     background-color: var(--light-bg);
     transition: var(--transition);
     border: 1px solid var(--border);
+    opacity: 0;
 }
 
-.timeline-item:hover .read-more {
+.timeline-item:hover .read-more,
+.project-card:hover .read-more {
+    opacity: 1;
+    transform: translateX(-0.5rem);
     background-color: var(--secondary-color);
     color: var(--white);
-    transform: translateX(5px);
     border-color: var(--secondary-color);
 }
 
@@ -475,23 +479,190 @@ html {
     margin-right: 0.5rem;
 }
 
-/* Clickable Indicator */
-[onclick] {
-    position: relative;
+/* Detailed Experience Page Enhancements */
+.experience-header {
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    background: var(--white);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-[onclick]::after {
-    content: 'Click to view details →';
-    position: absolute;
-    bottom: 1rem;
-    right: 1.5rem;
-    font-size: 0.875rem;
+.company-logo {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.header-content h2 {
+    margin-bottom: 0.5rem;
+}
+
+.header-content h3 {
     color: var(--secondary-color);
-    opacity: 0;
-    transition: var(--transition);
+    margin-bottom: 0.5rem;
 }
 
-[onclick]:hover::after {
-    opacity: 1;
-    right: 1rem;
+.header-content .date {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-section {
+    padding: 2.5rem;
+}
+
+.experience-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.experience-section h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Role Details Styling */
+.role-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.role-item ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.role-item ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.role-item ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Project Details Styling */
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.challenges-solutions ul li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--light-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.challenges-solutions ul li strong {
+    color: var(--primary-color);
+}
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.technical-skills,
+.soft-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Metrics Styling */
+.metrics ul li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--light-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .role-details,
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .experience-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation for cards */
+.experience-section {
+    transition: transform 0.3s ease;
+}
+
+.experience-section:hover {
+    transform: translateY(-4px);
+}
+
+/* Enhanced list styling */
+.experience-section ul:not(.technologies) li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.experience-section ul:not(.technologies) li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Remove all the old banner styles */
+.company-banner,
+.company-banner::before,
+.company-banner::after,
+.banner-content,
+.banner-content img,
+.banner-content h1 {
+    display: none;
 } 
