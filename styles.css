@@ -307,14 +307,18 @@ nav a:hover::after {
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     font-size: 0.875rem;
-    transition: var(--transition);
     border: 1px solid var(--border);
+    display: inline-block;
+    margin: 0.25rem;
+    transition: none;
+    cursor: default;
 }
 
 .skill-item:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    border-color: var(--secondary-color);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    border-color: var(--border);
+    transform: none;
 }
 
 /* Contact Section */
@@ -369,16 +373,18 @@ nav a:hover::after {
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     font-size: 0.875rem;
-    transition: var(--transition);
     border: 1px solid var(--border);
     display: inline-block;
     margin: 0.25rem;
+    transition: none;
+    cursor: default;
 }
 
 .technologies span:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    border-color: var(--secondary-color);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    border-color: var(--border);
+    transform: none;
 }
 
 /* Responsive Design */
