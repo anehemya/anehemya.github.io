@@ -144,6 +144,101 @@ nav a:hover::after {
     box-shadow: var(--shadow);
 }
 
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 300px;
+}
+
+.quick-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.quick-info i {
+    width: 20px;
+    color: var(--primary-color);
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+.interest-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.interest-item:hover {
+    transform: translateY(-2px);
+}
+
+.interest-item i {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+.interest-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Adjust card padding */
+.interests.card {
+    padding: 1.5rem;
+}
+
+/* Make sure the card heights match */
+.quick-info.card, .interests.card {
+    height: auto;
+    min-height: 250px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.social-item:hover {
+    transform: translateY(-2px);
+    color: var(--primary-color);
+}
+
+.social-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
 /* Experience Section */
 .timeline {
     display: flex;
@@ -402,12 +497,21 @@ nav a:hover::after {
     }
 
     .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    
+    .about-left {
+        width: 100%;
     }
 
     .profile-photo {
         max-width: 300px;
         margin: 0 auto;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }
 
@@ -685,4 +789,137 @@ html {
     width: 50px;
     height: 50px;
     object-fit: contain;
+}
+
+/* Project Page Specific Styles */
+.project-hero {
+    margin-top: 2rem;
+}
+
+.project-section {
+    margin-top: 3rem;
+}
+
+.project-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    max-width: 800px;
+}
+
+.overview-content {
+    margin-top: 1.5rem;
+}
+
+.process-stage {
+    margin-top: 2.5rem;
+}
+
+.process-stage:first-child {
+    margin-top: 0;
+}
+
+.stage-steps {
+    margin-top: 1.5rem;
+}
+
+.step {
+    margin-top: 2rem;
+}
+
+.step:first-child {
+    margin-top: 0;
+}
+
+.features-content {
+    margin-top: 2rem;
+}
+
+.feature {
+    margin-top: 2.5rem;
+}
+
+.feature:first-child {
+    margin-top: 0;
+}
+
+.results-content {
+    margin-top: 2rem;
+}
+
+.key-outcomes, .lessons-learned {
+    margin-top: 2rem;
+}
+
+.key-outcomes:first-child {
+    margin-top: 0;
+}
+
+.project-status {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+}
+
+.meta-item span {
+    color: var(--light-text);
+}
+
+.project-logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.social-links .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links .button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.social-links .button i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2.5rem;
+    }
 } 

@@ -28,7 +28,42 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="./assets/Headshot.jpg" alt="Akiva Yeshurun" class="profile-photo">
+                <div class="about-left">
+                    <img src="./assets/Headshot.jpg" alt="Akiva Yeshurun" class="profile-photo">
+                    
+                    <div class="quick-info card">
+                        <h3>Quick Facts</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Miami, FL</li>
+                            <li><i class="fas fa-graduation-cap"></i> Computer Science @ FIU</li>
+                            <li><i class="fas fa-code"></i> Full Stack Engineer</li>
+                            <li><i class="fas fa-language"></i> English, Hebrew</li>
+                        </ul>
+                    </div>
+
+                    <div class="interests card">
+                        <h3>Beyond Coding</h3>
+                        <div class="interests-grid">
+                            <div class="interest-item">
+                                <i class="fas fa-book"></i>
+                                <span>Digital Humanities</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-palette"></i>
+                                <span>History of the Middle East</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Psychology</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Philosophy of Law</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="about-text card">
                     <div class="about-paragraphs">
                         <p>My name is Akiva Yeshurun, and I am a full-time CS student at Florida International University as well as a full stack engineer. I have always been captivated by the convergence of the world of technology and the world of people. This fascination led me to pursue a degree in Computer Science with minors in Psychology and Digital Art, where I have developed a solid foundation in programming languages such as Python, Java, and Javascript, design skills such as UX research, ideation, and prototyping, and have learnt about social psychology and personality development. Through my coursework and personal projects, I have honed my problem-solving skills and gained hands-on experience in software development, especially focusing on building software to make education accessible.</p>
@@ -38,17 +73,18 @@
                         <p>Due to my professional experience as well as my focus on education, I bring a unique perspective and valuable skills to the table. Prior to my years in the professional workforce I spent two years abroad performing Talmudic research, in which I have over a decade of experience. This experience has provided me with deep analytical thinking, problem-solving, and research skills, which I believe are transferable to various professional settings. In my academic years I honed skills ranging from Computational Geometry to Artificial Intelligence, and have experience in Java, C, Python, and Javascript. I am familiar with Operating Systems and Cloud Computing, and using them in real world environments.</p>
                         
                         <p>As I continue my academic and professional journey, I am eager to apply my interdisciplinary knowledge and skills to real-world projects and challenges. I am committed to continuous learning and growth in both my technical abilities and understanding of human behavior, aiming to make meaningful contributions in the field of technology and beyond.</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/anehemya" target="_blank" class="button">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/akiva-yeshurun-909837281/" target="_blank" class="button">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:akyeshurun@gmail.com" class="button">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/anehemya" target="_blank" class="button">
+                                <i class="fab fa-github"></i>GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/akiva-yeshurun-909837281/" target="_blank" class="button">
+                                <i class="fab fa-linkedin"></i>LinkedIn
+                            </a>
+                            <a href="mailto:akyeshurun@gmail.com" class="button">
+                                <i class="fas fa-envelope"></i>Email
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,6 +216,23 @@
                     </div>
                     <div class="project-links">
                         <a href="#" target="_blank" class="button">
+                            Project Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card card" onclick="window.location.href='projects/alhatorah.html'">
+                    <h3>Alhatorah Mobile App</h3>
+                    <p>Led comprehensive UX research and design process for a mobile application focused on making Jewish texts accessible and engaging for modern users.</p>
+                    <p>Conducted thorough user research, created detailed user flows, and developed interactive prototypes through multiple iterations.</p>
+                    <div class="technologies">
+                        <span>UX Research</span>
+                        <span>Figma</span>
+                        <span>User Testing</span>
+                        <span>Prototyping</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/alhatorah.html" class="button">
                             Project Details
                         </a>
                     </div>
