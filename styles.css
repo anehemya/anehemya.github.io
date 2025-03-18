@@ -922,4 +922,78 @@ html {
         justify-content: center;
         margin-top: 2.5rem;
     }
+}
+
+/* Screenshots Grid Layout */
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin: 2rem auto;
+    max-width: 800px;  /* Reduced from 1000px */
+}
+
+.screenshot-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.screenshot-item h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;  /* Slightly smaller heading */
+}
+
+.comparison-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: auto;  /* Remove fixed height */
+}
+
+.comparison-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 250px;  /* Slightly larger to fit content better */
+}
+
+.screenshot-image {
+    width: 100%;
+    height: auto;  /* Let image determine height */
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border);
+}
+
+.screenshot-caption {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 0.85rem;  /* Slightly smaller caption */
+    max-width: 200px;  /* Limit caption width */
+    margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .screenshots-grid {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .comparison-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .comparison-item {
+        max-width: 220px;
+    }
 } 
