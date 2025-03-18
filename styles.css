@@ -950,8 +950,7 @@ html {
     display: flex;
     gap: 2rem;
     justify-content: center;
-    align-items: center;
-    height: auto;  /* Remove fixed height */
+    align-items: flex-start;  /* Change to flex-start to align tops */
 }
 
 .comparison-item {
@@ -960,13 +959,13 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    max-width: 250px;  /* Slightly larger to fit content better */
+    max-width: 250px;
 }
 
 .screenshot-image {
     width: 100%;
-    height: auto;  /* Let image determine height */
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;  /* Change from cover to contain */
     border-radius: 6px;
     box-shadow: var(--shadow);
     transition: var(--transition);
